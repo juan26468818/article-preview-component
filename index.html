@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+    <script defer src="./script.js"></script>
 </head>
 <body>
     <main>
@@ -25,14 +26,17 @@
                         <p class="date">28 Jun 2020</p>
                     </div>
                 </div>
-                <div>
-                    <img src="./img/icon-share.svg" alt="share icon" aria-hidden="true">
-                    <div class="share">
+                <div class="share-container">
+                    <button id="share-b">
+                        <img src="./img/icon-share.svg" id="share-i" alt="share icon" aria-hidden="true">
+                    </button>
+                    <div class="share hidden" id="share-view">
                         <p>SHARE</p>
                         <img src="./img/icon-facebook.svg">
                         <img src="./img/icon-twitter.svg">
                         <img src="./img/icon-pinterest.svg">
                     </div>
+                    <div class="t-share hidden"></div>
                 </div>
             </div>
         </div>
