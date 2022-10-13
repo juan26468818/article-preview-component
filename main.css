@@ -31,6 +31,7 @@ main{
 .main-img{
     width: 40%;
     object-fit: cover;
+    border-radius: 1rem 0 0 1rem;
 }
 .info-container{
     padding: 3rem;
@@ -67,9 +68,14 @@ h1{
 .date{
     color: var(--Grayish-Blue);
 }
+button{
+    border: none;
+    border-radius: 50%;
+    padding: .5rem;
+
+}
 .share-container{
     position: relative;
-
 }
 .share{
     position: absolute;
@@ -78,13 +84,15 @@ h1{
     left: -6rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: var(--Very-Dark-Grayish-Blue);
     padding: 1rem 2rem;
     border-radius: .5rem;
     letter-spacing: .3rem;
     color: var(--Grayish-Blue);
     font-size: .8rem;
+}
+.share > img{
+    margin-left: 1rem;
 }
 .t-share{
     position: absolute;
@@ -95,12 +103,7 @@ h1{
     top: -2rem;
     left: .5rem
 }
-button{
-    border: none;
-    border-radius: 50%;
-    padding: .5rem;
 
-}
 .active-b{
     background-color: var(--Desaturated-Dark-Blue);
 }
@@ -113,10 +116,33 @@ button{
 @media (max-width:650px){
     main{
         flex-direction: column;
+        overflow: hidden;
     }
     .main-img{
         width: 100%;
         height: 30vh;
         object-fit: cover;
+        border-radius: 1rem 1rem 0 0;
+    }
+    .info-container{
+        padding-bottom: 0;
+    }
+    .share{
+        height: 4rem;
+        width: 100vw;
+        top: -1rem;
+        left: -75vw;
+        z-index: 1;
+    }
+    button{
+        position: relative;
+        z-index: 2;
+        bottom: 2px;
+    }
+    .share > p{
+        margin-left: 2rem;
+    }
+    .t-share{
+        display: none;
     }
 }
